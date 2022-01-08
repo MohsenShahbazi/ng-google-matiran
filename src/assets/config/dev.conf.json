@@ -1,0 +1,4 @@
+{
+  "resourceUrl": "http://localhost:3000/",
+  "apiUrl": "https://api.exir.io/v1/trades/"
+}

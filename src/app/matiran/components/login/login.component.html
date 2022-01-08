@@ -1,0 +1,45 @@
+<!--<div class="container">-->
+<!--  <div class="card card-container">-->
+<!--    <img id="profile-img" class="profile-img-card" src="assets/images/avatar_2x.png" />-->
+<!--    <form class="form-signin" (ngSubmit)="loginUser()" #loginForm="ngForm">-->
+<!--      <input type="text" id="uname" class="form-control" name="uname" autocomplete="off"-->
+<!--        [(ngModel)]="userObject.uname" placeholder="Username" title="Please enter the username" required autofocus>-->
+<!--      <input type="password" id="upass" class="form-control" name="upass" autocomplete="off" #upass="ngModel"-->
+<!--        [(ngModel)]="userObject.upass" placeholder="Password" title="Please enter the password" required>-->
+<!--      <input type="text" id="authcode" class="form-control" *ngIf="this.tfaFlag" name="authcode" autocomplete="off"-->
+<!--        #authcode="ngModel" [(ngModel)]="userObject.authcode" placeholder="Two-Factor Auth code"-->
+<!--        title="Please enter the code" required>-->
+<!--      <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit"-->
+<!--        [disabled]="uname?.errors?.required || upass?.errors?.required || (this.tfaFlag && authcode?.errors?.required)">Sign-->
+<!--        in</button>-->
+<!--      <p style="text-align:center;">Want to reset login? <a [routerLink]="['/register']">Register-->
+<!--          here</a></p>-->
+<!--      <p class="text-danger" style="text-align:center;" *ngIf="errorMessage">{{errorMessage}}</p>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="container">
+  <div class="card card-container">
+    <form>
+      <img id="profile-img" class="profile-img-card" src="assets/img/avatar_2x.png"/>
+
+      <input type="text" id="uname" class="form-control" name="uname" autocomplete="off"
+             [(ngModel)]="userObject.uname" placeholder="{{'USERNAME'|translate}}" title="{{'ENTER_USERNAME'|translate}}" required
+             autofocus>
+      <input type="password" id="upass" class="form-control" name="upass" autocomplete="off"
+             [(ngModel)]="userObject.upass" placeholder="{{'PASSWORD'|translate}}" title="{{'ENTER_PASSWORD'|translate}}" required>
+      <input type="text" id="authcode" class="form-control" *ngIf="this.tfaFlag" name="authcode" autocomplete="off"
+             [(ngModel)]="userObject.authcode" placeholder="{{'Two_Factor_AUTH_CODE'|translate}}"
+             title="Please enter the code" required>
+
+      <button type="submit" class="btn btn-primary" (click)="loginUser()">{{'LOGIN'|translate}}</button>
+
+      <p style="text-align:center;">{{'WANT_TO_RESET_LOGIN'|translate}}
+        <a [routerLink]="['/register']">{{'REGISTER'|translate}}</a>
+      </p>
+      <p class="text-danger" style="text-align:center;" *ngIf="errorMessage">{{errorMessage}}</p>
+    </form>
+
+  </div>
+</div>
