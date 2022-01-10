@@ -21,6 +21,7 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {DashboardComponent} from "./components/dashboard/dashboard.component";
 import {NgChartsModule} from "ng2-charts";
+import {NgxEchartsModule} from "ngx-echarts";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -53,6 +54,9 @@ export function HttpLoaderFactory(http: HttpClient) {
       extend: true
     }),
     ToastrModule.forRoot(),
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    })
   ],
   providers: [
     AuthGuardGuard,

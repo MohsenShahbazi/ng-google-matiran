@@ -1,15 +1,62 @@
 <div class="container">
-  <div class="card card-container">
-  </div>
-</div>
-<canvas baseChart width="400" height="400"
-        [datasets]="lineChartData"
-        [labels]="lineChartLabels"
-        [options]="lineChartOptions"
-        [colors]="lineChartColors"
-        [legend]="lineChartLegend"
-        [chartType]="lineChartType"
-        [plugins]="lineChartPlugins">
-</canvas>
+  <div class="container">
 
-<button (click)="getList()">getlist</button>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-0 p-0">
+
+      <div class="card bg-white  col-3 me-auto  float-start">
+        <img class="card-img-top" style="width: 50px"
+             src="https://demo.heydari.co/exchange/platform/public/app-assets/images/currency/ripple.svg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-dark">tether</h5>
+          <a href="#" class="btn btn-primary">فروش</a>
+        </div>
+      </div>
+
+
+      <div class="card bg-white  col-3 me-auto  float-start">
+        <img class="card-img-top" style="width: 50px"
+             src="https://demo.heydari.co/exchange/platform/public/app-assets/images/currency/ripple.svg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-dark">dogecoin</h5>
+          <a href="#" class="btn btn-primary btn-sm w-md">خرید</a>
+        </div>
+      </div>
+
+      <div class="card  bg-white  col-3 me-auto  float-start">
+        <img class="card-img-top" style="width: 50px"
+             src="https://demo.heydari.co/exchange/platform/public/app-assets/images/currency/ripple.svg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-dark">bitcoin</h5>
+          <a href="#" class="btn btn-primary">خرید</a>
+        </div>
+      </div>
+
+
+      <div class="card  bg-white  col-3 me-auto  float-start">
+        <img class="card-img-top" style="width: 50px"
+             src="https://demo.heydari.co/exchange/platform/public/app-assets/images/currency/ripple.svg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-dark">ethereum</h5>
+          <a href="#" class="btn btn-primary">خرید</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container">
+    <div nz-row>
+      <div nz-col nzSpan="12">
+        <h5>{{list[0][0]}}</h5>
+        <div id="chart1" echarts [options]="options" theme="macarons" class="demo-chart"></div>
+      </div>
+    </div>
+
+
+    <div id="chart1" echarts [options]="optionExample" theme="macarons" class="demo-chart"></div>
+  </div>
+
+
+</div>
+
+
+

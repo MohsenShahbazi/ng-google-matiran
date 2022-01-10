@@ -34,5 +34,7 @@
   "ENABLE_TFA": "فعال سازی تائید هویت دو مرحله ای",
   "DISABLE_TFA": "غیرفعال سازی تائید هویت دو مرحله ای",
   "ENTER_THE_AUTH_CODE": "کد مخفی Google Authenticator را وارد کنید",
-  "CURRENT_SETTINGS": "تظیمات"
+  "CURRENT_SETTINGS": "تظیمات",
+  "SELL": "خرید",
+  "BUY": "فروش"
 }
